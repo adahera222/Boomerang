@@ -16,7 +16,6 @@ package
         private var playerSprite:FlxSprite;
 
         // Target Sprite
-        [Embed('../assets/Player_Target.png')] private var TargetImage:Class;
         private var targetSprite:FlxSprite;
 
         /**
@@ -35,7 +34,7 @@ package
         // Movement
         private var walkSpeed:int;
 
-        public function Player(x:int, y:int)
+        public function Player(x:int, y:int):void
         {
             position = new Vector2D(0, 0);
             targetPosition = new Vector2D(0, 0);
@@ -58,7 +57,8 @@ package
             add(playerSprite);
 
             targetSprite = new FlxSprite(-50, -50);
-            targetSprite.loadGraphic(TargetImage);
+            targetSprite.makeGraphic(5, 5, 0xffff1111);
+            targetSprite.visible = true;
             add(targetSprite);
         }
 
@@ -88,7 +88,11 @@ package
         public function setPlayerAngle(angle:Number):void
         {
             playerSprite.angle = angle + 90;
-            boomerang.setBoomerangAngle(angle + 90);
+
+            if (boomerangHeld)
+            {
+                boomerang.setBoomerangAngle(angle + 90);
+            }
         }
 
         public function setRotationToTarget():void
@@ -150,7 +154,28 @@ package
 
             if (FlxG.mouse.pressed())
             {
+                boomerang.setAndShowTargets(targetPosition.x, targetPosition.y);
+                targetSprite.visible = false;
+            }
 
+            if (FlxG.mouse.justReleased())
+            {
+                targetSprite.visible = true;
+                boomerangHeld = false;
+                boomerang.throwBoomerang();
+            }
+
+        }
+
+        public function CollisionCheck():void
+        {
+            if (boomerang.returning)
+            {
+                FlxG.overlap(playerSprite, boomerang.boomerangSprite, function():void {
+                    boomerang.caughtBoomerang();
+                    boomerangHeld = true;
+                    setPlayerPosition(position.x, position.y);
+                });
             }
         }
 
@@ -158,6 +183,7 @@ package
         {
             KeyboardControls();
             MouseControls();
+            CollisionCheck();
             super.update();
         }
     }
