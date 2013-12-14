@@ -1,5 +1,6 @@
 package
 {
+    import org.flixel.FlxG;
     import org.flixel.FlxState;
     import org.flixel.FlxText;
 
@@ -9,9 +10,6 @@ package
 
         public function GameState()
         {
-
-            var text:FlxText = new FlxText(50, 50, 500, "Hello Ludum Dare 28");
-            add(text);
 
             player = new Player(400, 400);
             add(player);

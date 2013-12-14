@@ -2,7 +2,7 @@
 <module type="Flex" version="4">
   <component name="FlexBuildConfigurationManager" active="LudumDare28">
     <configurations>
-      <configuration name="LudumDare28" pure-as="true" main-class="YouOnlyGetOne" output-file="LudumDare28.swf" output-folder="$MODULE_DIR$/out/production/LudumDare28" use-html-wrapper="true" wrapper-template-path="$MODULE_DIR$/html-template">
+      <configuration name="LudumDare28" pure-as="true" main-class="BoomerangGame" output-file="LudumDare28.swf" output-folder="$MODULE_DIR$/out/production/LudumDare28" use-html-wrapper="true" wrapper-template-path="$MODULE_DIR$/html-template">
         <dependencies target-player="11.1">
           <entries>
             <entry library-name="flixel-v2.561" library-level="project">
