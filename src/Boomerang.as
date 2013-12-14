@@ -22,6 +22,7 @@ package
 
         private var isThrown:Boolean;
         public var returning:Boolean;
+        private var spinning:Boolean;
 
         public function Boomerang(x:int, y:int):void
         {
@@ -51,6 +52,7 @@ package
 
             isThrown = false;
             returning = false;
+            spinning = false;
         }
 
         public function setBoomerangPosition(x:int, y:int):void
@@ -94,11 +96,13 @@ package
         //    targetSprite.visible = false;
          //   startSprite.visible = false;
             isThrown = true;
+            spinning = true;
         }
 
         public function caughtBoomerang():void
         {
             isThrown = false;
+            spinning = false;
         //    targetSprite.visible = false;
         //    startSprite.visible = false;
         }
@@ -120,27 +124,33 @@ package
             var dirX:Number = theTarget.x - position.x;
             var dirY:Number = theTarget.y - position.y;
 
-            var hyp = Math.sqrt(Math.pow(dirX, 2) + Math.pow(dirY, 2));
-            dirX /= hyp;
-            dirY /= hyp;
+            var hypotenuse:Number = Math.sqrt(Math.pow(dirX, 2) + Math.pow(dirY, 2));
+            dirX /= hypotenuse;
+            dirY /= hypotenuse;
 
             var newX:Number = position.x + (dirX * speed);
             var newY:Number = position.y + (dirY * speed);
 
-            var newPos:Vector2D = new Vector2D(newX, newY);
+            var diffX:Number = newX - theTarget.x;
+            var diffY:Number = newY - theTarget.y;
 
-            var diffX = newX - theTarget.x;
-            var diffY = newY - theTarget.y;
+            var distanceFromTarget:Number = Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
 
-            var dist = Math.sqrt(Math.pow(diffX, 2) + Math.pow(diffY, 2));
-
-            if (dist > 5)
+            if (distanceFromTarget > 5)
             {
                 setBoomerangPosition(newX, newY);
             }
             else
             {
-                returning = true;
+                if (returning)
+                {
+                    spinning = false;
+                }
+                else
+                {
+                    returning = true;
+                }
+
             }
         }
 
@@ -149,12 +159,22 @@ package
             boomerangSprite.angle += speed;
         }
 
+        public function hitObstacle():void
+        {
+            isThrown = false;
+            spinning = false;
+            returning = true;
+        }
+
         override public function update():void
         {
             if (isThrown)
             {
                 moveToTarget();
-                spin();
+                if (spinning)
+                {
+                    spin();
+                }
             }
 
             super.update();
