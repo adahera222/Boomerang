@@ -13,7 +13,6 @@ package
         /**
          * Sprites
          */
-
         // Player Sprite
         [Embed('../assets/Player_cropped_scaled.png')] private var SpriteImage:Class;
         private var playerSprite:FlxSprite;
@@ -45,12 +44,16 @@ package
         private var walkSpeed:int;
         // Player Health
         private var currentHealth:int;
+
+        private var timeSinceLostHealth:Number;
         // Player Alive
         private var playerAlive:Boolean;
 
         public function Player(x:int, y:int):void
         {
             currentHealth = MAXIMUM_HEALTH;
+
+            timeSinceLostHealth = 1 ;
 
             position = new Vector2D(0, 0);
             targetPosition = new Vector2D(0, 0);
@@ -97,13 +100,13 @@ package
             redBarHealth = this.recycle(FlxSprite) as FlxSprite;
             redBarHealth.x = 600;
             redBarHealth.y = 10;
-            redBarHealth.makeGraphic(MAXIMUM_HEALTH, 10, 0xfffd4444);
+            redBarHealth.makeGraphic(100, 10, 0xff000000);
             add(redBarHealth);
 
             greenBarHealth = this.recycle(FlxSprite) as FlxSprite;
             greenBarHealth.x = 600;
             greenBarHealth.y = 10;
-            greenBarHealth.makeGraphic(currentHealth, 10, 0xff16b021);
+            greenBarHealth.makeGraphic((currentHealth/MAXIMUM_HEALTH) * 100, 10, 0xff16b021);
             greenBarHealthWidth = currentHealth;
             add(greenBarHealth);
         }
@@ -150,6 +153,8 @@ package
                 playerSprite.x = position.x;
                 playerSprite.y = position.y;
 
+                setHealthBarPosition(position.x, position.y);
+
                 if (boomerangHeld)
                 {
                     boomerang.setBoomerangPosition(position.x, position.y - 20);
@@ -161,6 +166,14 @@ package
                 position.y = playerSprite.y;
             }
 
+        }
+
+        public function setHealthBarPosition(x:int, y: int):void
+        {
+            redBarHealth.x = x - 20;
+            redBarHealth.y = y + 50;
+            greenBarHealth.x = x - 20;
+            greenBarHealth.y = y + 50;
         }
 
         public function setTargetPosition(x:int, y:int):void
@@ -269,28 +282,33 @@ package
             }
         }
 
-        public function loseHealth():void
+        public function loseHealth(loseHealth:int = 20):void
         {
-            if (currentHealth > 1)
+            FlxG.log(timeSinceLostHealth);
+            if (timeSinceLostHealth > 0.5)
             {
-                currentHealth--;
-
-                if (greenBarHealthWidth != currentHealth)
+                if (currentHealth > 1)
                 {
-                    greenBarHealth.makeGraphic(currentHealth, 10, 0xff16b021);
-                }
+                    currentHealth -= loseHealth;
+                    timeSinceLostHealth = 0;
 
-            }
-            else
-            {
-                if (playerAlive)
+                    if (greenBarHealthWidth != currentHealth)
+                    {
+                        greenBarHealth.makeGraphic((currentHealth/MAXIMUM_HEALTH) * 100, 10, 0xff16b021);
+                        greenBarHealthWidth = currentHealth;
+                    }
+
+                }
+                else
                 {
-                    var text:FlxText = new FlxText(50, 50, 200, "You are dead");
-                    text.setFormat(null, 20);
-                    add(text);
-                    playerAlive = false;
+                    if (playerAlive)
+                    {
+                        var text:FlxText = new FlxText(50, 50, 200, "You are dead");
+                        text.setFormat(null, 20);
+                        add(text);
+                        playerAlive = false;
+                    }
                 }
-
             }
         }
 
@@ -315,6 +333,7 @@ package
 
         override public function update():void
         {
+            timeSinceLostHealth += FlxG.elapsed;
             KeyboardControls();
             MouseControls();
             CollisionCheck();

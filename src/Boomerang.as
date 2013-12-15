@@ -1,6 +1,8 @@
 package
 {
+    import org.flixel.FlxG;
     import org.flixel.FlxGroup;
+    import org.flixel.FlxSound;
     import org.flixel.FlxSprite;
 
     public class Boomerang extends FlxGroup
@@ -10,6 +12,17 @@ package
          */
         [Embed('../assets/Boomerang_cropped_scaled.png')] private var BoomerangImage:Class;
         public var boomerangSprite:FlxSprite;
+
+
+        /**
+         * Boomerang Sounds
+         */
+        [Embed('../assets/Hit_Hurt5.mp3')] private var BoomerangHitObstacle:Class;
+
+        [Embed('../assets/Powerup15.mp3')] private var BoomerangFlying:Class;
+        private var flyingSound:FlxSound;
+
+        [Embed('../assets/Pickup_Coin5.mp3')] private var BoomerangCaught:Class;
 
         private var targetSprite:FlxSprite;
         private var startSprite:FlxSprite;
@@ -26,6 +39,8 @@ package
 
         public function Boomerang(x:int, y:int):void
         {
+
+            flyingSound = new FlxSound();
 
             boomerangSprite = this.recycle(FlxSprite) as FlxSprite;
             boomerangSprite.x = 0;
@@ -103,14 +118,23 @@ package
          //   startSprite.visible = false;
             isThrown = true;
             spinning = true;
+
+            flyingSound.stop();
+            flyingSound = FlxG.play(BoomerangFlying, 1.0, false);
         }
 
         public function caughtBoomerang():void
         {
-            isThrown = false;
-            spinning = false;
-        //    targetSprite.visible = false;
-        //    startSprite.visible = false;
+            if (isThrown || spinning)
+            {
+                isThrown = false;
+                spinning = false;
+
+                flyingSound.stop();
+                FlxG.play(BoomerangCaught);
+                //targetSprite.visible = false;
+                //startSprite.visible = false;
+            }
         }
 
         public function moveToTarget():void
@@ -150,7 +174,12 @@ package
             {
                 if (returning)
                 {
-                    spinning = false;
+                    if (spinning)
+                    {
+                        spinning = false;
+                        flyingSound.stop();
+                        FlxG.play(BoomerangHitObstacle);
+                    }
                 }
                 else
                 {
@@ -170,6 +199,9 @@ package
             isThrown = false;
             spinning = false;
             returning = true;
+
+            flyingSound.stop();
+            FlxG.play(BoomerangHitObstacle);
         }
 
         override public function update():void

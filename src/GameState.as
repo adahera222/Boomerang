@@ -6,6 +6,9 @@ package
 
     public class GameState extends FlxState
     {
+
+        [Embed('../assets/Explosion17.mp3')] private var EnemyKilledSound:Class;
+
         private var player:Player;
 
         private var enemies:Array;
@@ -13,15 +16,52 @@ package
 
         private var numberOfEnemies:int;
         private var areaClear:Boolean;
+        private var areaClearTimer:Number;
+
+        static private var AreaIndex:int = 0;
+
+        static public function SetNextAreaIndex():void
+        {
+            AreaIndex++;
+
+            if (AreaIndex == 3)
+            {
+                AreaIndex = 0;
+            }
+        }
+
+        override public function create():void
+        {
+            setupArea(AreaIndex);
+            SetNextAreaIndex();
+        }
 
         public function GameState()
         {
+
+            setupEnemies();
+            setupObstacles();
+
             areaClear = false;
             player = new Player(400, 400);
             add(player);
 
-            setupEnemies();
-            setupObstacles();
+        }
+
+        public function setupArea(areaIndex:int)
+        {
+            switch (areaIndex)
+            {
+                case 0:
+                    FlxG.bgColor = 0xffbdb284;
+                    break;
+                case 1:
+                    FlxG.bgColor = 0xffffffff;
+                    break;
+                case 2:
+                    FlxG.bgColor = 0xff548f3d;
+                    break;
+            }
         }
 
         public function setupEnemies():void
@@ -45,17 +85,20 @@ package
         {
             obstacles = new Array();
 
-            var obstacle:Obstacle;
+            //wall
+            addObstacle(0, 0, true);
+            addObstacle(750, 0, true);
+            addObstacle(0, 0, true, 1);
+            addObstacle(0, 550, true, 1);
 
-            obstacle = new Obstacle(500, 50);
-            add(obstacle);
-            obstacles.push(obstacle);
+            addObstacle(500, 50);
+            addObstacle(150, 400);
+            addObstacle(300, 250);
+        }
 
-            obstacle = new Obstacle(150, 400);
-            add(obstacle);
-            obstacles.push(obstacle);
-
-            obstacle = new Obstacle(300, 250);
+        public function addObstacle(x:int, y:int, wall:Boolean = false, wallSide:int = 0)
+        {
+            var obstacle:Obstacle = new Obstacle(x, y, wall, wallSide);
             add(obstacle);
             obstacles.push(obstacle);
         }
@@ -68,8 +111,15 @@ package
                 {
                     FlxG.overlap(player.getBoomerangSprite(), enemies[i], function():void
                     {
-                        enemies[i].kill();
-                        numberOfEnemies--;
+                        enemies[i].loseHealth(1);
+
+                        if (!enemies[i].enemyAlive)
+                        {
+                            enemies[i].kill();
+                            FlxG.play(EnemyKilledSound);
+                            numberOfEnemies--;
+                        }
+
                     });
 
                 }
@@ -87,8 +137,11 @@ package
             {
                 FlxG.overlap(player.getPlayerSprite(), enemies[i], function():void
                 {
-                    player.loseHealth();
+                    player.loseHealth(20);
                 });
+
+                //enemies[i].MoveTowards(player.getPlayerSprite(), obstacles);
+
             }
 
         }
@@ -100,11 +153,31 @@ package
                 if (!areaClear)
                 {
                     var text:FlxText = new FlxText(50, 50, 200, "Area Clear");
-                    text.setFormat(null, 20);
+
+                    if (AreaIndex == 2)
+                    {
+                        text.setFormat(null, 20, 0xff000000);
+                    }
+                    else
+                    {
+                        text.setFormat(null, 20, 0xffffffff);
+                    }
+
                     add(text);
                     areaClear = true;
+                    areaClearTimer = 0;
                 }
 
+            }
+
+            if (areaClear)
+            {
+                areaClearTimer += FlxG.elapsed;
+
+                if (areaClearTimer > 2)
+                {
+                    FlxG.switchState(new GameState());
+                }
             }
         }
 

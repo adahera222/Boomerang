@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="329b3a99-240b-4e26-9727-953d9882bbad" name="Default" comment="Enemies, obstacles, health, collision, attacking and win/lose states added.">
+    <list default="true" id="329b3a99-240b-4e26-9727-953d9882bbad" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Blender/Enemy.blend" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Blender/Enemy_Projectile.blend" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Images/Enemy_Uncropped.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Images/Enemy_cropped.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Explosion17.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Sound/Explosion17.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Hit_Hurt5.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Sound/Hit_Hurt5.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Blender/Obstacle.blend" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Images/Obstacle_Uncropped.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Images/Obstacle_cropped.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Pickup_Coin5.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Sound/Pickup_Coin5.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Powerup15.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Sound/Powerup15.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Randomize18.mp3" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Sound/Randomize18.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Wall_1_cropped_scaled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Blender/Wall_Desert.blend" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Images/Wall_Uncropped.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Images/Wall_cropped.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Wall_cropped_scaled.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Boomerang.as" afterPath="$PROJECT_DIR$/src/Boomerang.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Enemy.as" afterPath="$PROJECT_DIR$/src/Enemy.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameState.as" afterPath="$PROJECT_DIR$/src/GameState.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Obstacle.as" afterPath="$PROJECT_DIR$/src/Obstacle.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.as" afterPath="$PROJECT_DIR$/src/Player.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html-template/history/history.css" afterPath="$PROJECT_DIR$/html-template/history/history.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html-template/history/history.js" afterPath="$PROJECT_DIR$/html-template/history/history.js" />
@@ -16,16 +40,16 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/LudumDare28.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1386988724209" ignored="false" />
     <file path="/fragment.js2" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387053894676" ignored="false" />
-    <file path="/GameState.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387105446542" ignored="false" />
+    <file path="/GameState.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387122661406" ignored="false" />
     <file path="/a.html" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1386988775573" ignored="false" />
     <file path="/a.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1386988917504" ignored="false" />
-    <file path="/Dummy.txt" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387104386382" ignored="false" />
-    <file path="/Player.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387107916735" ignored="false" />
+    <file path="/Dummy.txt" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387137986353" ignored="false" />
+    <file path="/Player.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387123079925" ignored="false" />
     <file path="/Vector2D.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387045996849" ignored="false" />
     <file path="/YouOnlyGetOne.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387036146672" ignored="false" />
-    <file path="/Boomerang.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387107609691" ignored="false" />
-    <file path="/Enemy.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387053049289" ignored="false" />
-    <file path="/Obstacle.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387054285701" ignored="false" />
+    <file path="/Boomerang.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387111796996" ignored="false" />
+    <file path="/Enemy.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387123465478" ignored="false" />
+    <file path="/Obstacle.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387119702691" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +113,7 @@
       <file leaf-file-name="BoomerangGame.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BoomerangGame.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="21" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
+            <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,7 +122,7 @@
       <file leaf-file-name="Boomerang.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Boomerang.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="0" selection-start="1470" selection-end="1470" vertical-scroll-proportion="0.0">
+            <state line="163" column="12" selection-start="4665" selection-end="4755" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,7 +131,7 @@
       <file leaf-file-name="GameState.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameState.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="11" selection-start="2872" selection-end="2872" vertical-scroll-proportion="0.0">
+            <state line="113" column="47" selection-start="2854" selection-end="2854" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,7 +140,7 @@
       <file leaf-file-name="Obstacle.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Obstacle.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
+            <state line="23" column="17" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -125,7 +149,7 @@
       <file leaf-file-name="Vector2D.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vector2D.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
+            <state line="8" column="11" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -134,7 +158,7 @@
       <file leaf-file-name="Player.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Player.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="284" column="13" selection-start="8011" selection-end="8011" vertical-scroll-proportion="0.4185606">
+            <state line="302" column="17" selection-start="8711" selection-end="8711" vertical-scroll-proportion="0.02202643">
               <folding>
                 <element signature="e#14#42#0" expanded="true" />
               </folding>
@@ -145,7 +169,7 @@
       <file leaf-file-name="Enemy.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Enemy.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="9" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
+            <state line="73" column="56" selection-start="1868" selection-end="1878" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -173,10 +197,10 @@
         <option value="$PROJECT_DIR$/src/YouOnlyGetOne.as" />
         <option value="$PROJECT_DIR$/src/BoomerangGame.as" />
         <option value="$PROJECT_DIR$/src/Vector2D.as" />
-        <option value="$PROJECT_DIR$/src/Enemy.as" />
+        <option value="$PROJECT_DIR$/src/Boomerang.as" />
         <option value="$PROJECT_DIR$/src/Obstacle.as" />
         <option value="$PROJECT_DIR$/src/GameState.as" />
-        <option value="$PROJECT_DIR$/src/Boomerang.as" />
+        <option value="$PROJECT_DIR$/src/Enemy.as" />
         <option value="$PROJECT_DIR$/src/Player.as" />
       </list>
     </option>
@@ -215,7 +239,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -244,7 +267,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src_assets" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -258,13 +281,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -536,7 +560,11 @@
       <created>1387060172430</created>
       <updated>1387060172430</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixed memory leak issue">
+      <created>1387107984876</created>
+      <updated>1387107984876</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -561,33 +589,33 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="827" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39886847" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17630465" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17821783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17630465" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956153" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.8217822" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.8217822" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17821783" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -633,7 +661,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enemies, obstacles, health, collision, attacking and win/lose states added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed memory leak issue" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -652,9 +680,12 @@
     <MESSAGE value="Player can now move using the keyboard and look using the mouse" />
     <MESSAGE value="The boomerang can now be thrown and caught." />
     <MESSAGE value="Enemies, obstacles, health, collision, attacking and win/lose states added." />
+    <MESSAGE value="Fixed memory leak issue" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -707,9 +738,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html-template/history/history.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="14" selection-start="38" selection-end="38" vertical-scroll-proportion="0.034642033">
-          <folding />
-        </state>
+        <state line="1" column="14" selection-start="38" selection-end="38" vertical-scroll-proportion="0.034642033" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/Player_cropped_scaled.png">
@@ -717,61 +746,59 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vector2D.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Enemy.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="9" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Obstacle.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../FlashLib/flixel-v2.56.swc!/library.swf">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1786" column="20" selection-start="77544" selection-end="77556" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
+        <state line="1786" column="20" selection-start="77544" selection-end="77556" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BoomerangGame.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="21" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameState.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="11" selection-start="2872" selection-end="2872" vertical-scroll-proportion="0.0">
+        <state line="0" column="7" selection-start="7" selection-end="7" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Boomerang.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1470" selection-end="1470" vertical-scroll-proportion="0.0">
+        <state line="163" column="12" selection-start="4665" selection-end="4755" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameState.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="47" selection-start="2854" selection-end="2854" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Obstacle.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="17" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vector2D.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="11" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="284" column="13" selection-start="8011" selection-end="8011" vertical-scroll-proportion="0.4185606">
+        <state line="302" column="17" selection-start="8711" selection-end="8711" vertical-scroll-proportion="0.02202643">
           <folding>
             <element signature="e#14#42#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Enemy.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="56" selection-start="1868" selection-end="1878" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
