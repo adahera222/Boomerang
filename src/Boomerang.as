@@ -27,7 +27,9 @@ package
         public function Boomerang(x:int, y:int):void
         {
 
-            boomerangSprite = new FlxSprite(0, 0);
+            boomerangSprite = this.recycle(FlxSprite) as FlxSprite;
+            boomerangSprite.x = 0;
+            boomerangSprite.y = 0;
             boomerangSprite.antialiasing = true;
             boomerangSprite.loadGraphic(BoomerangImage);
             add(boomerangSprite);
@@ -38,12 +40,16 @@ package
             targetPosition = new Vector2D(0, 0);
             startPosition = new Vector2D(0, 0);
 
-            targetSprite = new FlxSprite(0, 0);
+            targetSprite = this.recycle(FlxSprite) as FlxSprite;
+            targetSprite.x = 0;
+            targetSprite.y = 0;
             targetSprite.makeGraphic(10, 10, 0xffff1111);
             targetSprite.visible = false;
             add(targetSprite);
 
-            startSprite = new FlxSprite(0, 0);
+            startSprite = this.recycle(FlxSprite) as FlxSprite;
+            startSprite.x = 0;
+            startSprite.y = 0;
             startSprite.makeGraphic(10, 10, 0xffff1111);
             startSprite.visible = false;
             add(startSprite);

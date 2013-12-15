@@ -12,9 +12,11 @@ package
         private var obstacles:Array;
 
         private var numberOfEnemies:int;
+        private var areaClear:Boolean;
 
         public function GameState()
         {
+            areaClear = false;
             player = new Player(400, 400);
             add(player);
 
@@ -95,9 +97,14 @@ package
         {
             if (numberOfEnemies <= 0)
             {
-                var text:FlxText = new FlxText(50, 50, 200, "Area Clear");
-                text.setFormat(null, 20);
-                add(text);
+                if (!areaClear)
+                {
+                    var text:FlxText = new FlxText(50, 50, 200, "Area Clear");
+                    text.setFormat(null, 20);
+                    add(text);
+                    areaClear = true;
+                }
+
             }
         }
 

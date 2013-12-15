@@ -25,6 +25,7 @@ package
         // Health Bar
         private var redBarHealth:FlxSprite;
         private var greenBarHealth:FlxSprite;
+        private var greenBarHealthWidth:int;
 
         /**
          * The Boomerang
@@ -44,6 +45,8 @@ package
         private var walkSpeed:int;
         // Player Health
         private var currentHealth:int;
+        // Player Alive
+        private var playerAlive:Boolean;
 
         public function Player(x:int, y:int):void
         {
@@ -57,6 +60,8 @@ package
             add(boomerang);
             boomerangHeld = true;
 
+            playerAlive = true;
+
             setupSprites();
             setupHealthBar();
             setPlayerPosition(x, y);
@@ -64,18 +69,24 @@ package
 
         public function setupSprites():void
         {
-            playerSprite = new FlxSprite(0, 0);
+            playerSprite = this.recycle(FlxSprite) as FlxSprite;
+            playerSprite.x = 0;
+            playerSprite.y = 0;
             playerSprite.antialiasing = true;
             playerSprite.loadGraphic(SpriteImage);
             add(playerSprite);
 
-            playerSpriteTemp = new FlxSprite(0, 0);
+            playerSpriteTemp = this.recycle(FlxSprite) as FlxSprite;
+            playerSpriteTemp.x = 0;
+            playerSpriteTemp.y = 0;
             playerSpriteTemp.antialiasing = true;
             playerSpriteTemp.loadGraphic(SpriteImage);
             playerSpriteTemp.visible = false;
             add(playerSpriteTemp);
 
-            targetSprite = new FlxSprite(-50, -50);
+            targetSprite = this.recycle(FlxSprite) as FlxSprite;
+            targetSprite.x = -50;
+            targetSprite.y = -50;
             targetSprite.makeGraphic(5, 5, 0xffff1111);
             targetSprite.visible = true;
             add(targetSprite);
@@ -83,12 +94,17 @@ package
 
         public function setupHealthBar():void
         {
-            redBarHealth = new FlxSprite(600, 10);
+            redBarHealth = this.recycle(FlxSprite) as FlxSprite;
+            redBarHealth.x = 600;
+            redBarHealth.y = 10;
             redBarHealth.makeGraphic(MAXIMUM_HEALTH, 10, 0xfffd4444);
             add(redBarHealth);
 
-            greenBarHealth = new FlxSprite(600, 10);
+            greenBarHealth = this.recycle(FlxSprite) as FlxSprite;
+            greenBarHealth.x = 600;
+            greenBarHealth.y = 10;
             greenBarHealth.makeGraphic(currentHealth, 10, 0xff16b021);
+            greenBarHealthWidth = currentHealth;
             add(greenBarHealth);
         }
 
@@ -258,13 +274,23 @@ package
             if (currentHealth > 1)
             {
                 currentHealth--;
-                greenBarHealth.makeGraphic(currentHealth, 10, 0xff16b021);
+
+                if (greenBarHealthWidth != currentHealth)
+                {
+                    greenBarHealth.makeGraphic(currentHealth, 10, 0xff16b021);
+                }
+
             }
             else
             {
-                var text:FlxText = new FlxText(50, 50, 200, "You are dead");
-                text.setFormat(null, 20);
-                add(text);
+                if (playerAlive)
+                {
+                    var text:FlxText = new FlxText(50, 50, 200, "You are dead");
+                    text.setFormat(null, 20);
+                    add(text);
+                    playerAlive = false;
+                }
+
             }
         }
 
