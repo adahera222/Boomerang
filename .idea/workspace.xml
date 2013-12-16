@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="329b3a99-240b-4e26-9727-953d9882bbad" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BoomerangGame.as" afterPath="$PROJECT_DIR$/src/BoomerangGame.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameOverState.as" afterPath="$PROJECT_DIR$/src/GameOverState.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameState.as" afterPath="$PROJECT_DIR$/src/GameState.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.as" afterPath="$PROJECT_DIR$/src/Player.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html-template/history/history.css" afterPath="$PROJECT_DIR$/html-template/history/history.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html-template/history/history.js" afterPath="$PROJECT_DIR$/html-template/history/history.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html-template/history/historyFrame.html" afterPath="$PROJECT_DIR$/html-template/history/historyFrame.html" />
@@ -20,14 +17,14 @@
     <file path="/GameState.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387153626302" ignored="false" />
     <file path="/a.html" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1386988775573" ignored="false" />
     <file path="/a.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1386988917504" ignored="false" />
-    <file path="/Dummy.txt" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387154162228" ignored="false" />
+    <file path="/Dummy.txt" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387155755053" ignored="false" />
     <file path="/Player.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387155429904" ignored="false" />
     <file path="/Vector2D.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387045996849" ignored="false" />
     <file path="/YouOnlyGetOne.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387036146672" ignored="false" />
     <file path="/Boomerang.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387151932257" ignored="false" />
     <file path="/Enemy.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387141686087" ignored="false" />
     <file path="/Obstacle.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387140658074" ignored="false" />
-    <file path="/BoomerangGame.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387155508880" ignored="false" />
+    <file path="/BoomerangGame.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387156369062" ignored="false" />
     <file path="/IntroState.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387152122950" ignored="false" />
     <file path="/GameOverState.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387145688078" ignored="false" />
     <file path="/WinState.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387145264808" ignored="false" />
@@ -92,10 +89,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BoomerangGame.as" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BoomerangGame.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BoomerangGame.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="41" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
+            <state line="11" column="38" selection-start="273" selection-end="273" vertical-scroll-proportion="0.27124774">
               <folding />
             </state>
           </provider>
@@ -141,10 +138,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameOverState.as" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameOverState.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameOverState.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="13" selection-start="830" selection-end="830" vertical-scroll-proportion="0.7866185">
+            <state line="26" column="41" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#14#37#0" expanded="true" />
               </folding>
@@ -201,8 +198,8 @@
         <option value="$PROJECT_DIR$/src/NewSceneState.as" />
         <option value="$PROJECT_DIR$/src/GameState.as" />
         <option value="$PROJECT_DIR$/src/Player.as" />
-        <option value="$PROJECT_DIR$/src/BoomerangGame.as" />
         <option value="$PROJECT_DIR$/src/GameOverState.as" />
+        <option value="$PROJECT_DIR$/src/BoomerangGame.as" />
       </list>
     </option>
   </component>
@@ -624,7 +621,11 @@
       <created>1387154170744</created>
       <updated>1387154170745</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Made the game slightly harder, fixed some text on the game over screen">
+      <created>1387155762074</created>
+      <updated>1387155762074</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -721,7 +722,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menus, different placements for each level, sprite improvements." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made the game slightly harder, fixed some text on the game over screen" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -743,6 +744,7 @@
     <MESSAGE value="Fixed memory leak issue" />
     <MESSAGE value="Obstacles, enemy behaviour, sound, different stages" />
     <MESSAGE value="Menus, different placements for each level, sprite improvements." />
+    <MESSAGE value="Made the game slightly harder, fixed some text on the game over screen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -797,13 +799,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Boomerang.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="14" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Enemy.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="97" column="41" selection-start="2693" selection-end="2697" vertical-scroll-proportion="-11.24">
@@ -817,13 +812,6 @@
           <folding>
             <element signature="e#14#37#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameState.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="30" selection-start="5444" selection-end="5444" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -845,19 +833,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BoomerangGame.as">
+    <entry file="file://$PROJECT_DIR$/src/GameOverState.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="41" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
+        <state line="26" column="41" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#14#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Boomerang.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="14" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameOverState.as">
+    <entry file="file://$PROJECT_DIR$/src/GameState.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="13" selection-start="830" selection-end="830" vertical-scroll-proportion="0.7866185">
-          <folding>
-            <element signature="e#14#37#0" expanded="true" />
-          </folding>
+        <state line="210" column="30" selection-start="5444" selection-end="5444" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BoomerangGame.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="38" selection-start="273" selection-end="273" vertical-scroll-proportion="0.27124774">
+          <folding />
         </state>
       </provider>
     </entry>
