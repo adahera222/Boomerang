@@ -9,7 +9,7 @@ package
     {
         public function BoomerangGame()
         {
-            super(800, 600, GameState, 1);
+            super(800, 600, IntroState, 1);
             FlxG.debug = true;
             forceDebugger = true;
         }

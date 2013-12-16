@@ -1,6 +1,5 @@
 package
 {
-    import org.flixel.FlxButton;
     import org.flixel.FlxG;
     import org.flixel.FlxGroup;
     import org.flixel.FlxSprite;
@@ -19,6 +18,7 @@ package
         private var playerSpriteTemp:FlxSprite;
 
         // Target Sprite
+        [Embed('../assets/Target_cropped_scaled.png')] private var TargetImage:Class;
         private var targetSprite:FlxSprite;
 
         // Health Bar
@@ -49,9 +49,13 @@ package
         // Player Alive
         private var playerAlive:Boolean;
 
+        private var deadTimer:Number;
+
         public function Player(x:int, y:int):void
         {
             currentHealth = MAXIMUM_HEALTH;
+
+            deadTimer = 0;
 
             timeSinceLostHealth = 1 ;
 
@@ -90,7 +94,8 @@ package
             targetSprite = this.recycle(FlxSprite) as FlxSprite;
             targetSprite.x = -50;
             targetSprite.y = -50;
-            targetSprite.makeGraphic(5, 5, 0xffff1111);
+            //targetSprite.makeGraphic(5, 5, 0xff000000);
+            targetSprite.loadGraphic(TargetImage);
             targetSprite.visible = true;
             add(targetSprite);
         }
@@ -128,7 +133,7 @@ package
 
                 for(var i:int = 0; i < allMembers.length; i++)
                 {
-                    if (allMembers[i] == "Obstacle" || allMembers[i] == "Enemy")
+                    if (allMembers[i] == "Obstacle" || allMembers[i] == "Enemy_")
                     {
                         FlxG.overlap(playerSpriteTemp, allMembers[i], function():void
                         {
@@ -157,7 +162,7 @@ package
 
                 if (boomerangHeld)
                 {
-                    boomerang.setBoomerangPosition(position.x, position.y - 20);
+                    boomerang.setBoomerangPosition(position.x + 20, position.y - 30);
                 }
             }
             else
@@ -255,7 +260,7 @@ package
             if (FlxG.mouse.pressed())
             {
                 boomerang.setAndShowTargets(targetPosition.x, targetPosition.y);
-                targetSprite.visible = false;
+              //  targetSprite.visible = false;
             }
 
             if (FlxG.mouse.justReleased())
@@ -306,7 +311,10 @@ package
                         var text:FlxText = new FlxText(50, 50, 200, "You are dead");
                         text.setFormat(null, 20);
                         add(text);
+
+
                         playerAlive = false;
+                        deadTimer = 0;
                     }
                 }
             }
@@ -334,6 +342,17 @@ package
         override public function update():void
         {
             timeSinceLostHealth += FlxG.elapsed;
+
+            if (!playerAlive)
+            {
+                deadTimer += FlxG.elapsed;
+
+                if (deadTimer > 2)
+                {
+                    FlxG.switchState(new GameOverState());
+                }
+            }
+
             KeyboardControls();
             MouseControls();
             CollisionCheck();

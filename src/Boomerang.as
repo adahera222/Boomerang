@@ -10,7 +10,7 @@ package
         /**
          * Boomerang Sprites
          */
-        [Embed('../assets/Boomerang_cropped_scaled.png')] private var BoomerangImage:Class;
+        [Embed('../assets/Boomerang_2_cropped_scaled.png')] private var BoomerangImage:Class;
         public var boomerangSprite:FlxSprite;
 
 

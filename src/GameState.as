@@ -18,7 +18,7 @@ package
         private var areaClear:Boolean;
         private var areaClearTimer:Number;
 
-        static private var AreaIndex:int = 0;
+        static public var AreaIndex:int = 0;
 
         static public function SetNextAreaIndex():void
         {
@@ -36,19 +36,34 @@ package
             SetNextAreaIndex();
         }
 
-        public function GameState()
+        public function GameState(restart:Boolean = false)
         {
+
+            if (restart)
+            {
+                AreaIndex = 0;
+            }
 
             setupEnemies();
             setupObstacles();
 
             areaClear = false;
-            player = new Player(400, 400);
+
+
+            if (AreaIndex == 2)
+            {
+                player = new Player(500, 150);
+            }
+            else
+            {
+                player = new Player(400, 400);
+            }
+
             add(player);
 
         }
 
-        public function setupArea(areaIndex:int)
+        public function setupArea(areaIndex:int):void
         {
             switch (areaIndex)
             {
@@ -68,37 +83,76 @@ package
         {
             enemies = new Array();
 
-            var enemy:Enemy;
+            numberOfEnemies = 0;
 
-            enemy = new Enemy(200, 200);
+            if (AreaIndex == 0)
+            {
+                addEnemy(200, 200);
+                addEnemy(400, 150);
+                addEnemy(150, 330);
+            }
+            else if (AreaIndex == 1)
+            {
+                addEnemy(160, 200);
+                addEnemy(300, 150);
+                addEnemy(470, 230);
+                addEnemy(100, 100);
+            }
+            else if (AreaIndex == 2)
+            {
+                addEnemy(100, 450);
+                addEnemy(120, 300);
+                addEnemy(530, 430);
+                addEnemy(150, 150);
+            }
+        }
+
+        public function addEnemy(x:int, y:int):void
+        {
+            var enemy:Enemy = new Enemy(x, y);
             add(enemy);
             enemies.push(enemy);
-
-            enemy = new Enemy(400, 150);
-            add(enemy);
-            enemies.push(enemy);
-
-            numberOfEnemies = 2;
+            numberOfEnemies++;
         }
 
         public function setupObstacles():void
         {
             obstacles = new Array();
 
-            //wall
+            if (AreaIndex == 0)
+            {
+                addObstacle(550, 50);
+                addObstacle(70, 450);
+                addObstacle(590, 410);
+            }
+            else if (AreaIndex == 1)
+            {
+
+                addObstacle(600, 50);
+                addObstacle(50, 400);
+                addObstacle(300, 250);
+            }
+            else if (AreaIndex == 2)
+            {
+                addObstacle(50, 50);
+                addObstacle(150, 50);
+
+                addObstacle(300, 300);
+                addObstacle(300, 400);
+                addObstacle(400, 400);
+
+                addObstacle(600, 60);
+            }
             addObstacle(0, 0, true);
             addObstacle(750, 0, true);
             addObstacle(0, 0, true, 1);
             addObstacle(0, 550, true, 1);
 
-            addObstacle(500, 50);
-            addObstacle(150, 400);
-            addObstacle(300, 250);
         }
 
-        public function addObstacle(x:int, y:int, wall:Boolean = false, wallSide:int = 0)
+        public function addObstacle(x:int, y:int, wall:Boolean = false, wallSide:int = 0):void
         {
-            var obstacle:Obstacle = new Obstacle(x, y, wall, wallSide);
+            var obstacle:Obstacle = new Obstacle(x, y, wall, wallSide, AreaIndex);
             add(obstacle);
             obstacles.push(obstacle);
         }
@@ -137,10 +191,10 @@ package
             {
                 FlxG.overlap(player.getPlayerSprite(), enemies[i], function():void
                 {
-                    player.loseHealth(20);
+                    player.loseHealth(5);
                 });
 
-                //enemies[i].MoveTowards(player.getPlayerSprite(), obstacles);
+                enemies[i].MoveTowards(player.getPlayerSprite(), obstacles);
 
             }
 
@@ -164,6 +218,7 @@ package
                     }
 
                     add(text);
+
                     areaClear = true;
                     areaClearTimer = 0;
                 }
@@ -176,7 +231,7 @@ package
 
                 if (areaClearTimer > 2)
                 {
-                    FlxG.switchState(new GameState());
+                    FlxG.switchState(new NewSceneState());
                 }
             }
         }

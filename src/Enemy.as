@@ -6,7 +6,7 @@ package
 
     public class Enemy extends FlxGroup
     {
-        private static var MAXIMUM_HEALTH:int = 3;
+        private static var MAXIMUM_HEALTH:int = 4;
 
         /**
          * Enemy Sprites
@@ -62,9 +62,7 @@ package
 
             setupHealthBar();
             setHealthBarPosition(position.x, position.y);
-
         }
-
 
         public function setupHealthBar():void
         {
@@ -149,7 +147,7 @@ package
                  move = false;
             });
 
-            for(var i = 0; i < obstacles.length; i++)
+            for(var i:int = 0; i < obstacles.length; i++)
             {
                 FlxG.overlap(enemySpriteTemp, obstacles[i], function():void
                 {
