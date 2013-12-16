@@ -8,8 +8,12 @@ package
     {
         public function GameOverState()
         {
-            var startText:FlxText = new FlxText(280, 300, 1000, "Game Over");
+            var startText:FlxText = new FlxText(290, 250, 1000, "Game Over");
             startText.setFormat(null, 34);
+            add(startText);
+
+            var startText:FlxText = new FlxText(80, 540, 700, "Click the left mouse button to continue.");
+            startText.setFormat(null, 26);
             add(startText);
         }
 

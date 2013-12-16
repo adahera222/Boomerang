@@ -191,7 +191,7 @@ package
             {
                 FlxG.overlap(player.getPlayerSprite(), enemies[i], function():void
                 {
-                    player.loseHealth(5);
+                    player.loseHealth(15);
                 });
 
                 enemies[i].MoveTowards(player.getPlayerSprite(), obstacles);

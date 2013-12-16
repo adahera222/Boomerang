@@ -308,10 +308,18 @@ package
                 {
                     if (playerAlive)
                     {
-                        var text:FlxText = new FlxText(50, 50, 200, "You are dead");
-                        text.setFormat(null, 20);
-                        add(text);
-
+                        if (GameState.AreaIndex == 2)
+                        {
+                            var text:FlxText = new FlxText(50, 50, 200, "You lose");
+                            text.setFormat(null, 20, 0xff111111);
+                            add(text);
+                        }
+                        else
+                        {
+                            var text:FlxText = new FlxText(50, 50, 200, "You lose");
+                            text.setFormat(null, 20);
+                            add(text);
+                        }
 
                         playerAlive = false;
                         deadTimer = 0;

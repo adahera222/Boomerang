@@ -2,39 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="329b3a99-240b-4e26-9727-953d9882bbad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Blender/Boomerang_2.blend" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Boomerang_2_cropped_intro.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Boomerang_2_cropped_intro_.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Boomerang_2_cropped_scaled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Blender/Obstacle_Desert.blend" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Images/Obstacle_Desert_Uncropped.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Images/Obstacle_Desert_cropped.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Obstacle_Desert_cropped_scaled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Blender/Obstacle_Forest.blend" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Images/Obstacle_Forest_Uncropped.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Images/Obstacle_Forest_cropped.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Obstacle_Forest_cropped_scaled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Blender/Obstacle_Snow.blend" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Images/Obstacle_Snow_Uncropped.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Images/Obstacle_Snow_cropped.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Obstacle_Snow_cropped_scaled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Blender/Target.blend" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Images/Target_2_Uncropped.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Images/Target_Uncropped.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src_assets/Images/Target_cropped.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Target_cropped_scaled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Wall_1_Forest_cropped_scaled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Wall_1_Snow_cropped_scaled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Wall_Forest_cropped_scaled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/Wall_Snow_cropped_scaled.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GameOverState.as" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/IntroState.as" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NewSceneState.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Boomerang.as" afterPath="$PROJECT_DIR$/src/Boomerang.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BoomerangGame.as" afterPath="$PROJECT_DIR$/src/BoomerangGame.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Enemy.as" afterPath="$PROJECT_DIR$/src/Enemy.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameOverState.as" afterPath="$PROJECT_DIR$/src/GameOverState.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GameState.as" afterPath="$PROJECT_DIR$/src/GameState.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Obstacle.as" afterPath="$PROJECT_DIR$/src/Obstacle.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Player.as" afterPath="$PROJECT_DIR$/src/Player.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html-template/history/history.css" afterPath="$PROJECT_DIR$/html-template/history/history.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html-template/history/history.js" afterPath="$PROJECT_DIR$/html-template/history/history.js" />
@@ -50,14 +20,14 @@
     <file path="/GameState.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387153626302" ignored="false" />
     <file path="/a.html" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1386988775573" ignored="false" />
     <file path="/a.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1386988917504" ignored="false" />
-    <file path="/Dummy.txt" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387138306660" ignored="false" />
-    <file path="/Player.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387152934143" ignored="false" />
+    <file path="/Dummy.txt" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387154162228" ignored="false" />
+    <file path="/Player.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387155429904" ignored="false" />
     <file path="/Vector2D.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387045996849" ignored="false" />
     <file path="/YouOnlyGetOne.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387036146672" ignored="false" />
     <file path="/Boomerang.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387151932257" ignored="false" />
     <file path="/Enemy.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387141686087" ignored="false" />
     <file path="/Obstacle.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387140658074" ignored="false" />
-    <file path="/BoomerangGame.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387153572623" ignored="false" />
+    <file path="/BoomerangGame.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387155508880" ignored="false" />
     <file path="/IntroState.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387152122950" ignored="false" />
     <file path="/GameOverState.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387145688078" ignored="false" />
     <file path="/WinState.as" changelist="329b3a99-240b-4e26-9727-953d9882bbad" time="1387145264808" ignored="false" />
@@ -125,7 +95,7 @@
       <file leaf-file-name="BoomerangGame.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BoomerangGame.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="38" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+            <state line="11" column="41" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -154,7 +124,7 @@
       <file leaf-file-name="GameState.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameState.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="233" column="56" selection-start="6039" selection-end="6039" vertical-scroll-proportion="-14.44">
+            <state line="210" column="30" selection-start="5444" selection-end="5444" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -163,7 +133,7 @@
       <file leaf-file-name="NewSceneState.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NewSceneState.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="135" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.0">
+            <state line="39" column="0" selection-start="1387" selection-end="1564" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#14#40#0" expanded="true" />
               </folding>
@@ -174,7 +144,7 @@
       <file leaf-file-name="GameOverState.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GameOverState.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="472" selection-end="661" vertical-scroll-proportion="0.5153707">
+            <state line="29" column="13" selection-start="830" selection-end="830" vertical-scroll-proportion="0.7866185">
               <folding>
                 <element signature="e#14#37#0" expanded="true" />
               </folding>
@@ -194,7 +164,7 @@
       <file leaf-file-name="Player.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Player.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="345" column="17" selection-start="9857" selection-end="9857" vertical-scroll-proportion="-20.8">
+            <state line="313" column="63" selection-start="9180" selection-end="9180" vertical-scroll-proportion="-187.8">
               <folding>
                 <element signature="e#14#37#0" expanded="true" />
               </folding>
@@ -224,15 +194,15 @@
         <option value="$PROJECT_DIR$/src/YouOnlyGetOne.as" />
         <option value="$PROJECT_DIR$/src/Vector2D.as" />
         <option value="$PROJECT_DIR$/src/Obstacle.as" />
-        <option value="$PROJECT_DIR$/src/GameOverState.as" />
         <option value="$PROJECT_DIR$/src/Enemy.as" />
         <option value="$PROJECT_DIR$/src/Boomerang.as" />
         <option value="$PROJECT_DIR$/src/IntroState.as" />
-        <option value="$PROJECT_DIR$/src/Player.as" />
         <option value="$PROJECT_DIR$/src/WinState.as" />
-        <option value="$PROJECT_DIR$/src/BoomerangGame.as" />
-        <option value="$PROJECT_DIR$/src/GameState.as" />
         <option value="$PROJECT_DIR$/src/NewSceneState.as" />
+        <option value="$PROJECT_DIR$/src/GameState.as" />
+        <option value="$PROJECT_DIR$/src/Player.as" />
+        <option value="$PROJECT_DIR$/src/BoomerangGame.as" />
+        <option value="$PROJECT_DIR$/src/GameOverState.as" />
       </list>
     </option>
   </component>
@@ -650,7 +620,11 @@
       <created>1387138318060</created>
       <updated>1387138318060</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Menus, different placements for each level, sprite improvements.">
+      <created>1387154170744</created>
+      <updated>1387154170745</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -675,7 +649,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="22" width="1440" height="827" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -696,7 +670,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.8217822" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964131" sideWeight="0.8217822" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -747,7 +721,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Obstacles, enemy behaviour, sound, different stages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menus, different placements for each level, sprite improvements." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -768,6 +742,7 @@
     <MESSAGE value="Enemies, obstacles, health, collision, attacking and win/lose states added." />
     <MESSAGE value="Fixed memory leak issue" />
     <MESSAGE value="Obstacles, enemy behaviour, sound, different stages" />
+    <MESSAGE value="Menus, different placements for each level, sprite improvements." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -822,15 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameOverState.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="472" selection-end="661" vertical-scroll-proportion="0.5153707">
-          <folding>
-            <element signature="e#14#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Boomerang.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="14" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
@@ -854,34 +820,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BoomerangGame.as">
+    <entry file="file://$PROJECT_DIR$/src/GameState.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="38" selection-start="273" selection-end="273" vertical-scroll-proportion="0.0">
+        <state line="210" column="30" selection-start="5444" selection-end="5444" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Player.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="345" column="17" selection-start="9857" selection-end="9857" vertical-scroll-proportion="-20.8">
+        <state line="313" column="63" selection-start="9180" selection-end="9180" vertical-scroll-proportion="-187.8">
           <folding>
             <element signature="e#14#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameState.as">
+    <entry file="file://$PROJECT_DIR$/src/NewSceneState.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="233" column="56" selection-start="6039" selection-end="6039" vertical-scroll-proportion="-14.44">
+        <state line="39" column="0" selection-start="1387" selection-end="1564" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#14#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BoomerangGame.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="41" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NewSceneState.as">
+    <entry file="file://$PROJECT_DIR$/src/GameOverState.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="135" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.0">
+        <state line="29" column="13" selection-start="830" selection-end="830" vertical-scroll-proportion="0.7866185">
           <folding>
-            <element signature="e#14#40#0" expanded="true" />
+            <element signature="e#14#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
